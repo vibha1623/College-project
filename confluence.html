@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="gfg_con.css">
+    <link rel="stylesheet" href="scsa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Supermercado+One&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="logo.PNG" alt="clubsdesk" width="75px" height="75px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="clubs.html">Clubs</a></li>
+                        <li><a href="confluence.html">confluence</a></li>
+                        <li><a href="join.html">Join</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h1 class="title" style="text-align: center; margin: 25px; font-size: 45px;" >About Confluence</h1>
+            <div class ="para" style="padding: 10px; margin: 15px; font-size: 25px;">
+                <p>Confluence is the highly anticipated cultural fest of our college that brings together various student clubs and organizations, showcasing their talents and organizing a wide range of exciting events. It serves as a vibrant platform for students to exhibit their skills, creativity, and passion for the arts, sports, and other areas of interest.</p>
+            <p>During Confluence, the campus comes alive with an atmosphere of energy and enthusiasm. The fest features an extensive lineup of events and activities that cater to diverse interests and preferences. Whether one is inclined towards music, dance, drama, literature, fine arts, sports, or any other form of expression, there is something for everyone to enjoy and participate in.</p>
+            <p>The success of Confluence relies not only on the efforts of the organizing committee but also on the active participation and involvement of the college community. It is a celebration of talent, creativity, and cultural diversity, highlighting the vibrant spirit of our college and its students.</p>
+            </div>
+        </div>
+
+        <div >
+            <h2 class="T2" style="text-align: center; margin: 25px; font-size: 40px;">The Glory Of Confluence</h2>
+            <p class ="para1" style="padding: 10px; margin: 15px; font-size: 25px;">The glory of the confluence lies in various events organised by various student clubs during confluence.</p>
+        </div>
+          
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                
+                <img src="./pictures/inaugration.PNG" style="width: 100%; height: 650px;">
+            </div>
+            <div class="mySlides fade">
+                <img src="./pictures/libass.PNG" style="width: 100%; height: 650px;">
+            </div>
+            <div class="mySlides fade">
+                <img src="./pictures/bestof2k19.PNG" style="width: 100%; height: 650px;">
+            </div>
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>   
+            
+      
+    </main>
+    <br>
+   
+    <footer>
+        <div class="footer1">
+            <p class="footpara">Copyright &copy; | Gmail: vibhasrivastava9919</p>
+            <br>
+        </div>
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex +=n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (let i = 0; i < slides.length; i++) {
+               slides[i].style.display = "none"
+            }
+            for (let i = 0; i < dots.length; i++) {
+               dots[i].className = dots[i].className.replace(" active","");
+            } 
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";   
+        }
+        
+    </script>
+</body>
+
+</html

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="gfg_con.css">
+    <link rel="stylesheet" href="scsa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Supermercado+One&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="logo.PNG" alt="clubsdesk" width="75px" height="75px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                       
+                        <li><a href="clubs.html">clubs</a></li>
+                        <li><a href="confluence.html">confluence</a></li>
+                        <li><a href="join.html">Join</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+    <main>
+        <div>
+            <h1 style="text-align: center; font-size: 50px; margin: 7px; padding-bottom: 3px; padding-top: 25px;"> FINEARTS</h1>
+            <div class="mydiv">
+                <img class="myimg" src="./FA.jpg">
+            </div>
+            <div class="mydiv1">
+                    <p>  FineArts is a vibrant college club that celebrates creativity and the visual arts on campus. With a focus on painting, the club provides a platform for students to explore and express their artistic talents. FineArts organizes regular painting sessions where students can unleash their creativity and create beautiful artworks. Additionally, the club hosts various events related to arts, such as art exhibitions, competitions, and workshops conducted by renowned artists. These events not only showcase the talents of the students but also serve as opportunities for them to learn, grow, and connect with the broader artistic community. FineArts is a hub of artistic expression and inspiration, fostering a rich artistic culture within the college campus.</p>
+            </div>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <h1 style="text-align: center; padding-bottom: 16px;">OUR EVENTS</h1>
+                <img src="./pictures/fa1.PNG" style="width: 100%; height: auto;">
+            </div>
+            <div class="mySlides fade">
+                <img src="./pictures/blank.PNG" style="width: 100%; height: auto;">
+            </div>
+            <div class="mySlides fade">
+                <img src="./pictures/blank.PNG" style="width: 100%; height: auto;">
+            </div>
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div class="ssa">
+            <h1 style="text-align: center;">OUR GUIDES</h1>
+            <div class="guides">
+                <div class="image1">
+                  <img src="Poonam.jpg" style="width: 200px; height: 200px; align-items: center;">
+                  <p>Dr. Poonam Jindal <br> Faculty Incharge finearts</p>
+                </div>
+                <div class="image1">
+                    <img src="sacy1.jpg" style="width: 200px; height: 200px; align-items: center;">
+                    <p>Dr.abc <br> Associate Faculty Incharge finearts</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="ssa">
+            <h1 style="text-align: center;">OUR TEAM HEADS</h1>
+            <div class="team">
+                <div class="image">
+                  <img src="sacy1.jpg" style="width: 110px; height: 110px;">
+                  <p>XYZ <br>sacy</p>
+                </div>
+                <div class="image">
+                    <img src="sacy.jpg" style="width: 110px; height: 110px;">
+                    <p>ABC<br>Sacy</p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <br>
+    <footer>
+        <div class="footer1">
+            <p class="footpara">Copyright &copy; | Gmail: vibhasrivastava9919@gmail.com</p>
+            <br>
+        </div>
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex +=n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (let i = 0; i < slides.length; i++) {
+               slides[i].style.display = "none"
+            }
+            for (let i = 0; i < dots.length; i++) {
+               dots[i].className = dots[i].className.replace(" active","");
+            } 
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";   
+        }
+        
+    </script>
+</body>
+
+</html
